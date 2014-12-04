@@ -1,0 +1,63 @@
+
+
+    <div class="row" ng-controller="PlayerCtrl as uc">
+        &NonBreakingSpace;
+        <div class="jumbotron">
+            <h2>Squash Tournament</h2>
+
+            <p class="pull-right">... a UI created using AngularJS and Bootstrap</p>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group">
+                <h3>
+                    Players
+                    <a ng-href="/#/players/create" class="btn btn-primary pull-right" id="btn_player_create">Add Player</a>
+                </h3>
+                <hr>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" ng-model="searchText" placeholder="Type here to filter Players...">
+                <hr>
+            </div>
+
+
+            <table id="player_list" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>NicName</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Age</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="usr in uc.players | filter:searchText">
+                    <td>
+                        {{ usr.nicName }}
+                    </td>
+                    <td>
+                        {{ usr.firstName }}
+                    </td>
+                    <td>
+                        {{ usr.lastName }}
+                    </td>
+                    <td>
+                        {{ usr.age }}
+                    </td>
+                </tr>
+                <tr ng-hide="uc.players.length">
+                    <td colspan="3">
+                        <p class="text-center">No Players Found</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <hr>
+            <h4>Debug:</h4>
+            <pre>{{ uc.players | json }}</pre>
+        </div>
+
+    </div>
