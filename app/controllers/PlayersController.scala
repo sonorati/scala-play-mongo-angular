@@ -21,6 +21,7 @@ class PlayersController extends Controller with MongoController {
 
   def createPlayer = Action.async(parse.json) {
     request =>
+      logger.info(s"Body of the request: $request.body")
       request.body.validate[Player].map {
         player =>
           collection.insert(player).map {

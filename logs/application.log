@@ -1,13 +1,248 @@
-2014-12-04 21:24:34,285 - [INFO] - from play in pool-6-thread-5 
+2014-12-07 13:55:26,255 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-12-04 21:24:39,800 - [INFO] - from application in play-internal-execution-context-1 
+2014-12-07 13:55:33,264 - [INFO] - from application in play-internal-execution-context-1 
 ReactiveMongoPlugin starting...
 
-2014-12-04 21:24:39,808 - [INFO] - from application in play-internal-execution-context-1 
+2014-12-07 13:55:33,272 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'heroku_app32220025'! Servers:
+		[ds061360.mongolab.com:61360]
+
+2014-12-07 13:55:33,276 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-12-07 13:55:56,539 - [ERROR] - from application in play-akka.actor.default-dispatcher-5 
+
+
+! @6ke3379k1 - Internal server error, for (GET) [/players] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: JsError(List((/created,List(ValidationError(error.path.missing,WrappedArray())))))]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.3.jar:2.2.3]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:166) [play_2.10-2.2.3.jar:2.2.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:163) [play_2.10-2.2.3.jar:2.2.3]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.10.3.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.1.jar:2.2.1]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.lang.RuntimeException: JsError(List((/created,List(ValidationError(error.path.missing,WrappedArray())))))
+	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Iteratee$$anonfun$run$1.apply(Iteratee.scala:350) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at play.api.libs.iteratee.Iteratee$$anonfun$run$1.apply(Iteratee.scala:343) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at play.api.libs.iteratee.ImmediateIteratee$$anonfun$fold$2.apply(Iteratee.scala:595) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at play.api.libs.iteratee.ImmediateIteratee$$anonfun$fold$2.apply(Iteratee.scala:595) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.success(Promise.scala:89) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.success(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at reactivemongo.core.iteratees.CustomEnumerator$SEnumerator$$anonfun$reactivemongo$core$iteratees$CustomEnumerator$SEnumerator$$loop$1$1.apply(iteratees.scala:116) ~[reactivemongo_2.10-0.10.0.jar:0.10.0]
+	at reactivemongo.core.iteratees.CustomEnumerator$SEnumerator$$anonfun$reactivemongo$core$iteratees$CustomEnumerator$SEnumerator$$loop$1$1.apply(iteratees.scala:87) ~[reactivemongo_2.10-0.10.0.jar:0.10.0]
+	at play.api.libs.iteratee.ImmediateIteratee$$anonfun$fold$2.apply(Iteratee.scala:595) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at play.api.libs.iteratee.ImmediateIteratee$$anonfun$fold$2.apply(Iteratee.scala:595) ~[play-iteratees_2.10-2.2.3.jar:2.2.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346) [scala-library-2.10.3.jar:na]
+	... 2 common frames omitted
+
+2014-12-07 13:56:31,736 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 13:56:31,771 - [INFO] - from application in ForkJoinPool-2-worker-13 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 13:56:31,879 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 13:56:31,880 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'heroku_app32220025'! Servers:
+		[ds061360.mongolab.com:61360]
+
+2014-12-07 13:56:31,881 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-12-07 14:10:26,707 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:10:26,707 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:10:26,728 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
 ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
 		[localhost:27017]
 
-2014-12-04 21:24:39,813 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-07 14:10:26,728 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:10:27,298 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:10:27,298 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:10:27,464 - [ERROR] - from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 
+(State: Closing) UNHANDLED MESSAGE: ChannelConnected(155964671)
+
+2014-12-07 14:10:27,464 - [ERROR] - from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 
+(State: Closing) UNHANDLED MESSAGE: ChannelConnected(155964671)
+
+2014-12-07 14:10:27,470 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:10:27,470 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:10:27,525 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:10:27,525 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:10:27,525 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:10:27,525 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:10:27,681 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:10:27,681 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:10:27,694 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:10:27,694 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:12:42,577 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:12:42,577 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:12:42,599 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:12:42,599 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:12:43,880 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:12:43,880 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:12:43,900 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:12:43,900 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:12:43,953 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:12:43,953 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:12:43,954 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:12:43,954 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:12:43,966 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:12:43,966 - [INFO] - from application in specs2.DefaultExecutionStrategy2 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:12:43,986 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:12:43,986 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:16:03,834 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:16:03,841 - [INFO] - from application in ForkJoinPool-2-worker-3 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:16:03,900 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:16:03,901 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:16:03,901 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2014-12-07 14:25:06,037 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:25:06,058 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:25:06,163 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:25:06,491 - [ERROR] - from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 
+(State: Closing) UNHANDLED MESSAGE: ChannelConnected(-1390510057)
+
+2014-12-07 14:25:06,498 - [INFO] - from application in ForkJoinPool-1-worker-13 
+ReactiveMongo Connections stopped. [Success(Closed)]
+
+2014-12-07 14:35:40,596 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin starting...
+
+2014-12-07 14:35:40,616 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin successfully started with db 'tournament'! Servers:
+		[localhost:27017]
+
+2014-12-07 14:35:41,889 - [INFO] - from application in specs2.DefaultExecutionStrategy1 
+ReactiveMongoPlugin stops, closing connections...
+
+2014-12-07 14:35:41,920 - [INFO] - from application in ForkJoinPool-1-worker-15 
+ReactiveMongo Connections stopped. [Success(Closed)]
 

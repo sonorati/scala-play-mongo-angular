@@ -5,12 +5,16 @@
 # ~~~~
 
 # Single endpoint for serving AngularJS
-GET     /                           @controllers.ApplicationController.index
-GET     /randomUUID                 @controllers.ApplicationController.randomUUID
+GET         /                    @controllers.ApplicationController.index
+GET         /randomUUID          @controllers.ApplicationController.randomUUID
 
 # Player management API
-GET     /players                    @controllers.PlayersController.findPlayers
-POST    /player                     @controllers.PlayersController.createPlayer
+GET         /players             @controllers.PlayersController.findPlayers
+POST        /player              @controllers.PlayersController.createPlayer
+
+# Tournament management API
+GET         /tournaments         @controllers.TournamentController.findTournaments
+POST        /tournament          @controllers.TournamentController.createTournament
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET         /assets/*file        controllers.Assets.at(path="/public", file)

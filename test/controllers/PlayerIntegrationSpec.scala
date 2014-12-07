@@ -1,5 +1,7 @@
 package controllers
 
+import org.joda.time.DateTime
+
 import scala.concurrent._
 import duration._
 import org.specs2.mutable._
@@ -18,9 +20,9 @@ class PlayerIntegrationSpec extends Specification {
     "insert a valid json" in {
       running(FakeApplication()) {
         val request = FakeRequest.apply(POST, "/player").withJsonBody(Json.obj(
-          "firstName" -> "Jack",
+          "firstName" -> "Ani",
           "lastName" -> "London",
-          "nicName" -> "LondonI",
+          "nicName" -> "ani",
           "age" -> 27,
           "active" -> true))
         val response = route(request)
