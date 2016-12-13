@@ -1,3 +1,3 @@
 #!/bin/bash
 
- echo 'Here it is!'
+echo "some file content" > ./outputfile
